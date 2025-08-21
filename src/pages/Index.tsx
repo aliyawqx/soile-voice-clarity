@@ -3,6 +3,7 @@ import FeaturesSection from "@/components/features/FeaturesSection";
 import StatsSection from "@/components/stats/StatsSection";
 import CTASection from "@/components/cta/CTASection";
 import Header from "@/components/navigation/Header";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -28,8 +29,8 @@ const Index = () => {
               <span className="text-xl font-bold">Soile AI</span>
             </div>
             <div className="flex items-center space-x-8 text-sm">
-              <a href="#" className="hover:text-primary-light transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary-light transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="hover:text-primary-light transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-primary-light transition-colors">Terms of Service</Link>
               <span>© 2024 Soile AI. All rights reserved.</span>
             </div>
           </div>

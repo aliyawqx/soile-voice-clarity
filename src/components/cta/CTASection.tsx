@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -24,13 +25,17 @@ const CTASection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg" className="group">
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button variant="heroSecondary" size="lg">
-                  Schedule Consultation
-                </Button>
+                <Link to="/contact">
+                  <Button variant="hero" size="lg" className="group">
+                    Get Started Today
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="heroSecondary" size="lg">
+                    Schedule Consultation
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -48,10 +53,12 @@ const CTASection = () => {
                 <p className="text-muted-foreground mb-4">
                   Get in touch with our support team for any questions
                 </p>
-                <Button variant="outline" className="group">
-                  contact@soile.net
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <Link to="mailto:contact@soile.net">
+                  <Button variant="outline" className="group">
+                    contact@soile.net
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -66,10 +73,12 @@ const CTASection = () => {
                 <p className="text-muted-foreground mb-4">
                   Speak directly with our specialists for personalized help
                 </p>
-                <Button variant="outline" className="group">
-                  Schedule Call
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <Link to="/contact">
+                  <Button variant="outline" className="group">
+                    Schedule Call
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
